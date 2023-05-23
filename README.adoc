@@ -29,7 +29,7 @@ npm install
 
 === Underhood
 
-Create symlink to the reveal.js script directory in the `postinstall` hook:
+Create symlink to the `/node_modules/reveal.js/` script directory in the `postinstall` hook:
 
 [source,bash]
 --
