@@ -1,0 +1,575 @@
+include::.settings.adoc[]
+
+= Presentation: Subtitle
+
+:author: JS/UI Team
+:description: Example of the usage asciidoc presentation engine
+
+== Basic presentation with speaker notes
+
+[.small]
+[source, markdown]
+----
+= Title Slide
+
+== Slide One
+
+* Foo
+* Bar
+* World
+
+== Slide Two
+
+A Great Story
+
+[.notes]
+--
+* tell anecdote
+--
+----
+
+[.notes]
+--
+* tell anecdote
+* make a point
+--
+
+== Vertical slides
+
+Use `=== Header` for vertical slides.
+
+[source, markdown]
+----
+== Vertical slides
+    Content
+
+=== Vertical sub slide 1
+    Content
+
+=== Vertical sub slide 2
+    Content
+----
+
+=== Vertical sub slide 1
+
+**Vertical sub slide 1** will be rendered vertically below **Vertical slides**
+
+=== Vertical sub slide 2
+
+**Vertical sub slide 2** will be rendered vertically below **Vertical sub slide 1**
+
+== Typography
+
+=== Paragraphs
+Paragraphs don't require any special markup in AsciiDoc.
+A paragraph is just one or more lines of consecutive text.
+
+To begin a new paragraph, separate it by at least one empty line from the previous paragraph or block.
+
+=== Text format
+
+[.has-text-left]
+--
+Text Formatting **bold text** and _italic_.
+
+Underline [.underline]#text# and [.line-through]#text#
+
+Some `text` or `code` highlight
+
+Some https://google.com[link] example or auto convert http://link.to.site.com
+--
+
+[source, markdown]
+----
+**bold** 
+
+_italic_
+
+[.underline]#text#
+
+[.line-through]#text#
+
+`highlight code`
+
+https://google.com[link]
+----
+
+=== Text format
+
+[.has-text-left]
+--
+Use tilde `~` for ~subscript~
+
+Use caret `^` for ^superscript^
+
+[.small]
+Use `[.small]` for smaller text size.
+--
+
+[source, markdown]
+----
+~subscript~
+
+^superscript^
+
+[.small]
+Small text will be here
+----
+
+=== Text alignment
+Text alignment of columns and blocks is also supported.
+
+[.has-text-left]
+You can use `.has-text-left`
+[.has-text-right]
+`.has-text-right` classes for align content
+[.has-text-justified]
+Or `.has-text-justified` lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+[.columns]
+=== Lists
+
+[.column.has-text-left]
+--
+List example:
+
+* Few
+* Bullets
+* Here
+
+[source, markdown]
+----
+* Unordered list item
+* Unordered list item
+* Unordered list item
+----
+--
+
+[.column.has-text-left]
+--
+Number the items:
+
+. One
+. Two
+. Three
+
+[source, markdown]
+----
+. Number list item
+. Number list item
+. Number list item
+----
+--
+
+=== Checkbox
+
+- [x] Clone the repo
+- [ ] Install dependencies
+- [x] Build it and check it locally
+
+[source, markdown]
+----
+- [ ] Checkbox
+- [x] Checkbox checked
+----
+
+== Code highlight
+
+[.has-text-left]
+=== Code highlight
+
+Use `[source]` block for highlight a code.
+
+[source, markdown]
+--
+.The title (optional)
+[source,javascript]
+----
+const ingredients = [ "lemon", "tomato", "salt", "potato"];
+
+for (const key in ingredients) {
+  console.log( ingredients[key] );
+}
+----
+--
+
+By default, `[source]` blocks and blocks delimited by `----` will be highlighted.
+
+[.columns.has-text-left]
+=== Code highlight and marks
+
+Also, you can use marks inside a code: `<1>`, `<2>`, etc.
+
+[.column.is-two-thirds]
+[source,javascript]
+--
+for (let i = 0; i < 9; i++) { <1>
+  console.log(i);             <2>
+}
+--
+
+[.column.is-one-third.has-text-left.small]
+--
+<1> The `for` loop
+<2> Just a `console` call
+--
+
+[.column.is-full-column]
+[source, markdown]
+----
+[source,javascript]
+--
+for (let i = 0; i < 9; i++) { \<1>
+  console.log(i); \<2>
+}
+--
+<1> The `for` loop
+<2> Just a `console` call
+----
+
+== Images
+
+=== Image
+
+[source, markdown]
+----
+image::your_link_to_image[]
+----
+
+image::https://placehold.co/600x400[]
+
+[.columns]
+=== Image Border
+
+[.column.is-half]
+--
+Round image
+
+image::https://placehold.co/200x200[role="round"]
+
+[source,markdown]
+----
+image::....jpg[role="round"]
+----
+--
+
+[.column.is-half]
+--
+Thumbnail
+
+image::https://placehold.co/200x200[role="thumb"]
+
+[source,markdown]
+----
+image::....jpg[role="thumb"]
+----
+--
+
+=== Background image
+
+[source, markdown]
+----
+image::cover.jpg[background, size=cover]
+----
+This will put cover.jpg as the slide’s background image.
+
+image::http://www.develop.in.ua/presenter/assets/arrows_bg_slide.png[background, size=cover]
+
+== Video
+
+=== Video player
+
+video::9CSp9ZQEtBQ[youtube, start=34, options=autoplay]
+
+[background-video="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",options="loop,muted"]
+=== Background video
+
+[sidebar]
+A background video for a slide can be specified using the background-video element attribute.
+
+[source, markdown]
+----
+[background-video="https://my.video/file.mp4",options="loop,muted"]
+== Nice background!
+----
+
+
+== Layout
+
+[.columns]
+=== Columns
+
+[.column.is-half.has-text-left]
+--
+Use `[.columns]` and `[.column]` for flex layout
+--
+
+[.column.is-half]
+[source, markdown]
+--
+[.columns]
+== Slide title
+
+[.column]
+Column one content
+
+[.column]
+Column two content
+--
+
+[.columns.is-vcentered]
+=== Columns vcenter
+
+[.column.is-half]
+Add `.is-vcentered` class to `[.columns]` for vertical align
+
+[.column.is-half]
+--
+image::https://placehold.co/600x400[]
+--
+
+[.columns.is-vcentered]
+=== Columns size
+
+[.column.has-text-left]
+--
+If you want to change the size of a single column, you can use one of the following classes:
+
+[.small]
+* `is-three-quarters`
+* `is-two-thirds`
+* `is-half`
+* `is-one-third`
+* `is-one-quarter`
+* `is-full-column`
+
+The other columns will fill up the remaining space automatically.
+--
+
+[.column.is-one-third]
+--
+image::https://placehold.co/100x100[]
+image::https://placehold.co/100x100[]
+image::https://placehold.co/100x100[]
+image::https://placehold.co/100x100[]
+--
+
+[.columns]
+=== Columns size
+
+[.column.is-one-quarter]
+[source,css]
+--
+.is-one-quarter
+--
+
+[.column.is-three-quarters]
+[source,css]
+--
+.is-three-quarters
+--
+
+[.column.is-one-third]
+[source,css]
+--
+.is-one-third
+--
+
+[.column.is-two-thirds]
+[source,css]
+--
+.is-two-thirds
+--
+
+[.column.is-half]
+[source,css]
+--
+.is-half
+--
+
+[.column.is-half]
+[source,css]
+--
+.is-half
+--
+
+[.column.is-full-column]
+[source,css]
+--
+.is-full-column
+--
+
+== Content
+
+=== Sidebar
+
+Main text is here.
+
+[sidebar]
+Sidebars are used to visually separate auxiliary bits of content that supplement the main text.
+
+And here...
+
+[source,markdown]
+--
+[sidebar]
+Sidebars are used to visually separate auxiliary bits of content that supplement the main text.
+--
+
+[.columns]
+=== Labels
+
+The AsciiDoc language provides five admonition types represented by the following labels:
+
+[.column.is-one-third.has-text-left]
+* `NOTE`
+* `TIP`
+* `IMPORTANT`
+* `CAUTION`
+* `WARNING`
+
+[.column.is-two-thirds]
+--
+[.has-text-left]
+NOTE: Note to yourself.
+
+[.has-text-left]
+TIP: You can warm up food with fire.
+
+[.has-text-left]
+IMPORTANT: Fire can be dangerous.
+
+[.has-text-left]
+CAUTION: Be careful with it!
+
+[.has-text-left]
+WARNING: Run, if you want to live!
+--
+
+[.column.is-full-column]
+[source, markdown]
+--
+NOTE: Note to yourself
+--
+
+=== Quoted block
+
+[.small]
+[quote,Monty Python and the Holy Grail]
+____
+Dennis: Come and see the violence inherent in the system. Help! Help! I'm being repressed!
+
+King Arthur: Bloody peasant!
+
+Dennis: Oh, what a giveaway! Did you hear that? Did you hear that, eh? That's what I'm on about! Did you see him repressing me? You saw him, Didn't you?
+____
+
+=== Markdown-style blockquotes
+
+> > What's new?
+>
+> I've got Markdown in my AsciiDoc!
+
+[source,markdown]
+--
+> > What's new?
+>
+> I've got Markdown in my AsciiDoc!
+--
+
+
+=== Q&A
+
+[qanda]
+What is the answer?::
+This is the answer.
+
+Are cameras allowed?::
+Are backpacks allowed?::
+No.
+
+[.small]
+[source, markdown]
+--
+[qanda]
+What is the answer?::
+This is the answer.
+
+Are cameras allowed?::
+Are backpacks allowed?::
+No.
+--
+
+=== Table
+
+[cols=2,frame=none,options=header]
+.Table header
+|===
+| Header 1
+| Header 2
+
+| Row 1, Col1
+| Row 1, Col2
+
+| Row 2, Col1
+| Row 2, Col2
+|===
+[source, markdown]
+----
+[cols=2,frame=none,options=header]
+.Table header
+|===
+| Header 1
+| Header 2
+
+| Row 1, Col1
+| Row 1, Col2
+
+| Row 2, Col1
+| Row 2, Col2
+|===
+----
+
+== Animation
+
+=== Step by step
+
+[%step]
+* this
+* is
+* revealed
+* gradually
+
+=== Style
+
+The style can be changed by using a different role
+
+[.shrink%step]
+[sidebar]
+ONE
+
+[.strike%step]
+[sidebar]
+TWO
+
+[.grow%step]
+[sidebar]
+THREE
+
+=== Order
+
+The order can be changed using the `step` attribute
+
+[TIP,step=3]
+Finally, a pro tip...
+
+[WARNING,step=1]
+First, watch out for...
+
+[IMPORTANT.fade-up,step=2]
+Second, don't forget...
+
+== Finish Him!
+
+[discrete] 
+=== 🇺🇦

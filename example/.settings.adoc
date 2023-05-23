@@ -1,0 +1,14 @@
+// favicon
+:favicon: ./../images/icons/icon.png
+// enable image-based icons
+:icons: font
+// use local library, or you can switch to CDN
+:revealjsdir: ./../javascripts/reveal.js
+// use custom NIX theme
+// or create custom theme https://github.com/hakimel/reveal.js/tree/4.5.0/css/theme
+:revealjs_customtheme: ./../stylesheets/nix.css
+:revealjs_transition: fade
+// highlight js settings
+:source-highlighter: highlightjs
+// you can switch to CDN theme, choose one here https://cdnjs.com/libraries/highlight.js
+// :highlightjs-theme: https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/foundation.min.css

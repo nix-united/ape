@@ -1,0 +1,12 @@
+include::.settings.adoc[]
+
+= Education center
+
+== Materials
+
+include::.contents.adoc[]
+
+== NIX
+
+[discrete]
+=== 🇺🇦

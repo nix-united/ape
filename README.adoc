@@ -1,0 +1,91 @@
+include::.settings.adoc[]
+
+= Asciidoc engine
+
+== Getting started
+
+- [ ] Clone the repo
+- [ ] Install dependencies
+- [ ] Create your presentation's slides
+- [ ] Build it and check it locally
+- [ ] Push your changes to the repo
+- [ ] Enjoy
+
+== Clone the repo
+
+[source,bash]
+--
+git clone https://gitlab.nixdev.co/js/edu/presentations/engine.git
+--
+
+== Install dependencies
+
+Installs the package and any packages that it depends on:
+
+[source,bash]
+--
+npm install
+--
+
+=== Underhood
+
+Create symlink to the reveal.js script directory in the `postinstall` hook:
+
+[source,bash]
+--
+ln -s `pwd`/node_modules/reveal.js/ ./javascripts/reveal.js
+--
+
+== Create presentation's slides
+
+Create your presentation's slides uses https://docs.asciidoctor.org/[asciidoc] format with https://docs.asciidoctor.org/reveal.js-converter/latest/converter/features/[reveal.js features].
+
+* Create directory for your presentation.
+* Create subdirectory `images` if you need it
+* Create `.settings.adoc` file for reveal.js https://docs.asciidoctor.org/reveal.js-converter/latest/converter/revealjs-options/[configuration]
+* Create `.adoc` file for every presentation
+* Include settings in every file `include::.settings.adoc[]`
+* Add link to your presentations to `.contents.adoc` file (optional)
+
+You can see our link:./example/index.html[presentation] for more examples of the slides
+
+== Build and review
+
+Convert the `adoc` file to the `html` format and check the result html file in manual:
+
+[source,bash]
+--
+npm run build ./index.adoc
+--
+
+Or run web server and observe changes of the file for running converter:
+
+[source,bash]
+--
+npm start
+# or
+npm start ./example/index.adoc
+--
+
+== PDF files
+
+To convert presentation's slides from HTML to PDF run the following command:
+
+[source,bash]
+--
+npm run pdf ./index.html ./index.pdf
+--
+
+== Push your changes
+
+[source,bash]
+--
+cd javascript-basics
+git add --all
+git commit -m "Presentation about Javascript"
+git push
+--
+
+== Enjoy
+
+So, you can build your presentation locally or download artifacts from the project pipeline.

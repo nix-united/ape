@@ -1,0 +1,73 @@
+# Official framework image. Look for the different tagged releases at:
+# https://hub.docker.com/r/library/node/tags/
+image: node:latest
+
+# This folder is cached between builds
+# https://docs.gitlab.com/ee/ci/yaml/index.html#cache
+cache:
+  paths:
+    - node_modules/
+
+# Stages
+stages:
+  - build
+  - deploy
+  - export
+
+# Install dependencies
+build:
+  stage: build
+  script:
+    - npm install
+
+# Convert all asciidoc files to the HTML format
+# https://docs.asciidoctor.org/asciidoctor/latest/cli/
+# Prepare artifacts for publishing
+pages:
+  stage: deploy
+  script:
+    # skip README O_o
+    - rm ./README.adoc
+    # generate HTML files from asciidoc
+    - npm run build *.adoc */*.adoc
+    # list of the result
+    - find . -type f -not -path '*/\.*' -not -path '*/node_modules/*' -name "*.html"
+    # prepare directory with resources for web
+    - mkdir .public
+    - cp -r javascripts .public
+    - cp -r stylesheets .public
+    - cp -r node_modules/reveal.js .public/javascripts
+    # copy all HTML files
+    - find . -type f -not -path '*/\.*' -not -path '*/node_modules/*' -name "*.html" -exec cp --parents -t "./.public" {} +
+    # copy all images directories
+    - find . -type d -name "images" -not -path '*/\.*' -not -path '*/node_modules/*' -exec cp -r --parents -t "./.public" {} +
+    # rename to public, this is required for generate artifacts
+    - mv .public public
+    - ls -la ./public
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+  environment: production
+
+export:
+  stage: export
+  image:
+    name: astefanutti/decktape
+    entrypoint: [""]
+  script:
+    - mkdir export
+    - echo "Prepare PDF files"
+    # generate PDF files from the HTML files
+    - |+
+      for file in $(find ./public -type f -not -path '*/\.*' -not -path './public/javascripts/*' -name "*.html")
+      do
+        node /decktape/decktape.js --chrome-path chromium-browser $file "./export/${file:9:length-5}.pdf"
+      done
+  artifacts:
+    paths:
+      - export
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+  environment: production
