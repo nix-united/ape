@@ -54,18 +54,18 @@ pages:
 export:
   stage: export
   image:
-    name: astefanutti/decktape
+    name: astefanutti/decktape:3.7
     entrypoint: [""]
   script:
     - mkdir export
     - echo "Prepare PDF files"
     # generate PDF files from the HTML files
-    - node /decktape/decktape.js --chrome-path chromium-browser ./public/index.html ./export/index.pdf"
-    #- |+
-    #  for file in $(find ./public -type f -not -path '*/\.*' -not -path './public/javascripts/*' -name "*.html")
-    #  do
-    #    node /decktape/decktape.js --chrome-path chromium-browser $file "./export/${file:9:length-5}.pdf"
-    #  done
+    # - node /decktape/decktape.js --chrome-path chromium-browser ./public/index.html ./export/index.pdf
+    - |+
+      for file in $(find ./public -type f -not -path '*/\.*' -not -path './public/javascripts/*' -name "*.html")
+      do
+        node /decktape/decktape.js --chrome-path chromium-browser $file "./export/${file:9:length-5}.pdf"
+      done
   artifacts:
     paths:
       - export
