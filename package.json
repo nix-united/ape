@@ -1,6 +1,6 @@
 {
-  "name": "asciidoc-slides",
-  "description": "Asciidoc slides engine",
+  "name": "asciidoc-presentation-engine",
+  "description": "Asciidoc presentation engine",
   "version": "0.0.1",
   "author": "Anton Shevchuk <anton.shevchuk@nixs.com>, Maksym Medvediev <maksym.medvediev@nixs.com>",
   "repository": {
