@@ -279,7 +279,14 @@ image::http://www.develop.in.ua/presenter/assets/arrows_bg_slide.png[background,
 
 === Video player
 
+video::http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4[start=42]
+
+[source,markdown]
+----
+video::https://my.video/file.mp4[]
+# or for youtube
 video::9CSp9ZQEtBQ[youtube, start=34, options=autoplay]
+----
 
 [background-video="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",options="loop,muted"]
 === Background video
