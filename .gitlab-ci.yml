@@ -60,7 +60,6 @@ export:
     - mkdir export
     - echo "Prepare PDF files"
     # generate PDF files from the HTML files
-    # - node /decktape/decktape.js --chrome-path chromium-browser ./public/index.html ./export/index.pdf
     - |+
       for file in $(find ./public -type f -not -path '*/\.*' -not -path './public/javascripts/*' -name "*.html")
       do

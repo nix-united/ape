@@ -1,6 +1,8 @@
 include::.settings.adoc[]
 
-= Asciidoc engine
+= Asciidoc Presentation Engine
+
+image::images/ape_logo.png[]
 
 == Getting started
 
@@ -80,9 +82,8 @@ npm run pdf ./index.html ./index.pdf
 
 [source,bash]
 --
-cd javascript-basics
 git add --all
-git commit -m "Presentation about Javascript"
+git commit -m "My first presentation with APE"
 git push
 --
 
