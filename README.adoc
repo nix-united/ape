@@ -49,7 +49,9 @@ Create your presentation's slides uses https://docs.asciidoctor.org/[asciidoc] f
 * Include settings in every file `include::.settings.adoc[]`
 * Add link to your presentations to `.contents.adoc` file (optional)
 
-You can see our link:./example/index.html[presentation] for more examples of the slides
+You can see our link:./example/index.adoc[presentation] for more examples of the slides.
+
+Live demo is also available here http://js.pages.nixdev.co/edu/presentations/engine
 
 == Build and review
 
