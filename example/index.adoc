@@ -1,6 +1,6 @@
 include::.settings.adoc[]
 
-= Presentation: Subtitle
+= Presentation: engine
 
 :author: JS/UI Team
 :description: Example of the usage asciidoc presentation engine
@@ -33,6 +33,11 @@ A Great Story
 * tell anecdote
 * make a point
 --
+
+== Hotkeys
+
+* press the `S` key to open the speaker view
+* press the `O` key to observe the presentation's slides
 
 == Vertical slides
 
@@ -229,6 +234,11 @@ for (let i = 0; i < 9; i++) { \<1>
 
 == Images
 
+[.notes]
+--
+https://docs.asciidoctor.org/asciidoc/latest/macros/images/
+--
+
 === Image
 
 [source, markdown]
@@ -277,15 +287,23 @@ image::http://www.develop.in.ua/presenter/assets/arrows_bg_slide.png[background,
 
 == Video
 
+[.notes]
+--
+https://docs.asciidoctor.org/asciidoc/latest/macros/audio-and-video/
+--
+
 === Video player
 
-video::http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4[start=42]
+video::http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4[ options="autoplay"]
 
 [source,markdown]
 ----
+# video file
 video::https://my.video/file.mp4[]
-# or for youtube
+# or youtube
 video::9CSp9ZQEtBQ[youtube, start=34, options=autoplay]
+# or vimeo
+video::357862493[vimeo, options=autoplay]
 ----
 
 [background-video="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",options="loop,muted"]
@@ -299,7 +317,6 @@ A background video for a slide can be specified using the background-video eleme
 [background-video="https://my.video/file.mp4",options="loop,muted"]
 == Nice background!
 ----
-
 
 == Layout
 
@@ -484,7 +501,6 @@ ____
 > I've got Markdown in my AsciiDoc!
 --
 
-
 === Q&A
 
 [qanda]
@@ -575,6 +591,25 @@ First, watch out for...
 
 [IMPORTANT.fade-up,step=2]
 Second, don't forget...
+
+[transition=zoom]
+=== Zoom zoom
+
+This slide will override the presentation transition and zoom!
+
+[source,markdown]
+--
+[transition=zoom]
+=== Zoom zoom
+...
+--
+
+You can choose from `none`, `fade`, `slide`, `convex`, `concave` and `zoom`.
+
+[transition-speed=fast]
+=== Speed
+
+Choose from three transition speeds: default, fast or slow!
 
 == Finish Him!
 
