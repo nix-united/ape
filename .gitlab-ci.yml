@@ -26,8 +26,6 @@ build:
 pages:
   stage: deploy
   script:
-    # skip README O_o
-    - rm ./README.adoc
     # generate HTML files from asciidoc
     - npm run build *.adoc */*.adoc
     # list of the result

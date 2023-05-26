@@ -33,7 +33,7 @@ function convertFile (file) {
 }
 
 /**
- * I'm watching you 👀
+ * I'm watching you. 👀
  * @param {string} filename
  */
 function watchCallback (filename) {
