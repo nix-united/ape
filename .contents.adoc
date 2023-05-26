@@ -1,6 +1,6 @@
 === Presentations
 
-// it should be links to the HTML files
+// it should be links to the ADOC files
 
-* link:./README.html[Manual]
-* link:./example/index.html[Complex example]
+* xref:./README.adoc[APE manual]
+* xref:./example/index.adoc[Complex example]

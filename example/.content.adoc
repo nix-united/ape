@@ -156,6 +156,22 @@ No.
 |===
 ----
 
+=== Cross-References
+
+Open xref:index.adoc#typography[typography section]
+
+Or back to the <<Table,previous>> slide
+
+[source,markdown]
+--
+[#typography]
+== Typography
+
+Open xref:index.adoc#typography[typography section]
+
+Or back to the <<Table,previous>> slide
+--
+
 [.has-text-left.small]
 === Footnotes
 

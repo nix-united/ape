@@ -67,6 +67,7 @@ Use `=== Header` for vertical slides.
 
 **Vertical sub slide 2** will be rendered vertically below **Vertical sub slide 1**
 
+[#typography]
 == Typography
 
 include::.typography.adoc[]

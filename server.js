@@ -37,6 +37,7 @@ function convertFile (file) {
  * @param {string} filename
  */
 function watchCallback (filename) {
+  // skip hidden files
   if (filename.startsWith('.')) {
     return
   }
