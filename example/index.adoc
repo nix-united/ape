@@ -294,15 +294,15 @@ https://docs.asciidoctor.org/asciidoc/latest/macros/audio-and-video/
 
 === Video player
 
-video::http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4[ options="autoplay"]
+video::9CSp9ZQEtBQ[youtube, start=34, options=autoplay]
 
 [source,markdown]
 ----
 # video file
 video::https://my.video/file.mp4[]
-# or youtube
+# youtube
 video::9CSp9ZQEtBQ[youtube, start=34, options=autoplay]
-# or vimeo
+# vimeo
 video::357862493[vimeo, options=autoplay]
 ----
 
