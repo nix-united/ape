@@ -1,4 +1,3 @@
-
 === Video player
 
 video::9CSp9ZQEtBQ[youtube, start=34, options=autoplay]

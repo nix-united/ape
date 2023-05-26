@@ -42,7 +42,6 @@ A Great Story
 * make a point
 --
 
-
 == Vertical slides
 
 Use `=== Header` for vertical slides.
@@ -67,18 +66,40 @@ Use `=== Header` for vertical slides.
 
 **Vertical sub slide 2** will be rendered vertically below **Vertical sub slide 1**
 
+== !
+
+No title slide
+
+[.small]
+[source,asciidoc]
+----
+== !
+
+This
+
+[%notitle]
+== Presentation
+
+presentation's titles
+
+[%conceal]
+== Concealed
+
+should be concealed
+----
+
 [#typography]
 == Typography
 
-include::.typography.adoc[]
+include::includes/typography.adoc[]
 
-== Code highlight
+== Code
 
-include::.code.adoc[]
+include::includes/code.adoc[]
 
 == Content
 
-include::.content.adoc[]
+include::includes/content.adoc[]
 
 == Images
 
@@ -87,8 +108,7 @@ include::.content.adoc[]
 https://docs.asciidoctor.org/asciidoc/latest/macros/images/
 --
 
-include::.images.adoc[]
-
+include::includes/images.adoc[]
 
 == Video
 
@@ -97,11 +117,11 @@ include::.images.adoc[]
 https://docs.asciidoctor.org/asciidoc/latest/macros/audio-and-video/
 --
 
-include::.video.adoc[]
+include::includes/video.adoc[]
 
 == Layout
 
-include::.layout.adoc[]
+include::includes/layout.adoc[]
 
 == Animation
 
@@ -111,7 +131,7 @@ https://docs.asciidoctor.org/reveal.js-converter/latest/converter/syntax/fragmen
 https://docs.asciidoctor.org/reveal.js-converter/latest/converter/syntax/transition/
 --
 
-include::.animation.adoc[]
+include::includes/animation.adoc[]
 
 == Finish Him!
 

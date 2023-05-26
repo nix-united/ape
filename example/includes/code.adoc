@@ -49,3 +49,33 @@ for (let i = 0; i < 9; i++) { \<1>
 <1> The `for` loop
 <2> Just a `console` call
 ----
+
+=== Line numbers
+
+Line Numbers & Highlights for source code blocks
+
+[source,html,linenums,highlight="3,8-10"]
+--
+<table>
+  <tr>
+    <td>Apples</td>
+    <td>$1</td>
+    <td>7</td>
+  </tr>
+  <tr>
+    <td>Oranges</td>
+    <td>$2</td>
+    <td>18</td>
+  </tr>
+</table>
+--
+
+[source,markdown]
+--
+[source,html,linenums,highlight="3,8-10"]
+----
+<table>
+...
+</table>
+----
+--

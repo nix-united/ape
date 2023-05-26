@@ -158,7 +158,7 @@ No.
 
 === Cross-References
 
-Open xref:index.adoc#typography[typography section]
+Open xref:#typography[typography section]
 
 Or back to the <<Table,previous>> slide
 
@@ -167,7 +167,7 @@ Or back to the <<Table,previous>> slide
 [#typography]
 == Typography
 
-Open xref:index.adoc#typography[typography section]
+Open xref:#typography[typography section]
 
 Or back to the <<Table,previous>> slide
 --
