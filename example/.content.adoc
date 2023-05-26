@@ -1,0 +1,171 @@
+
+=== Sidebar
+
+Main text is here.
+
+[sidebar]
+Sidebars are used to visually separate auxiliary bits of content that supplement the main text.
+
+And here...
+
+[source,markdown]
+--
+[sidebar]
+Sidebars are used to visually separate auxiliary bits of content that supplement the main text.
+--
+
+[.columns]
+=== Labels
+
+The AsciiDoc language provides five admonition types represented by the following labels:
+
+[.column.is-one-third.has-text-left]
+* `NOTE`
+* `TIP`
+* `IMPORTANT`
+* `CAUTION`
+* `WARNING`
+
+[.column.is-two-thirds]
+--
+[.has-text-left]
+NOTE: Note to yourself.
+
+[.has-text-left]
+TIP: You can warm up food with fire.
+
+[.has-text-left]
+IMPORTANT: Fire can be dangerous.
+
+[.has-text-left]
+CAUTION: Be careful with it!
+
+[.has-text-left]
+WARNING: Run, if you want to live!
+--
+
+[.column.is-full-column]
+[source, markdown]
+--
+NOTE: Note to yourself
+--
+
+[.columns]
+=== Icon's macro
+
+[.column.is-full-column]
+--
+
+[source,markdown]
+----
+icon:<target>[<attrlist>]
+----
+--
+
+[.column.is-half]
+--
+icon:heart[2x,role=red]
+
+icon:tags[] ruby, asciidoctor
+--
+
+[.column.is-half]
+--
+[source,markdown]
+----
+icon:heart[2x,role=red]
+
+icon:tags[] ruby, asciidoctor
+----
+--
+
+=== Quoted block
+
+[.small]
+[quote,Monty Python and the Holy Grail]
+____
+Dennis: Come and see the violence inherent in the system. Help! Help! I'm being repressed!
+
+King Arthur: Bloody peasant!
+
+Dennis: Oh, what a giveaway! Did you hear that? Did you hear that, eh? That's what I'm on about! Did you see him repressing me? You saw him, Didn't you?
+____
+
+=== Markdown-style blockquotes
+
+> > What's new?
+>
+> I've got Markdown in my AsciiDoc!
+
+[source,markdown]
+--
+> > What's new?
+>
+> I've got Markdown in my AsciiDoc!
+--
+
+=== Q&A
+
+[qanda]
+What is the answer?::
+This is the answer.
+
+Are cameras allowed?::
+Are backpacks allowed?::
+No.
+
+[.small]
+[source, markdown]
+--
+[qanda]
+What is the answer?::
+This is the answer.
+
+Are cameras allowed?::
+Are backpacks allowed?::
+No.
+--
+
+=== Table
+
+[cols=2,frame=none,options=header]
+.Table header
+|===
+| Header 1
+| Header 2
+
+| Row 1, Col1
+| Row 1, Col2
+
+| Row 2, Col1
+| Row 2, Col2
+|===
+[source, markdown]
+----
+[cols=2,frame=none,options=header]
+.Table header
+|===
+| Header 1
+| Header 2
+
+| Row 1, Col1
+| Row 1, Col2
+
+| Row 2, Col1
+| Row 2, Col2
+|===
+----
+
+[.has-text-left.small]
+=== Footnotes
+
+The hail-and-rainbow protocol can be initiated at three levels:
+
+. doublefootnote:[The double hail-and-rainbow level makes my toes tingle.]
+. tertiary
+. apocalyptic
+
+A bold statement!footnote:disclaimer[Opinions are my own.]
+
+Another outrageous statement.footnote:disclaimer[]
+

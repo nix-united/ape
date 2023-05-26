@@ -1,4 +1,6 @@
 === Presentations
 
+// it should be links to the HTML files
+
 * link:./README.html[Manual]
 * link:./example/index.html[Complex example]

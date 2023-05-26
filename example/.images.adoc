@@ -1,0 +1,58 @@
+=== Image
+
+[source, markdown]
+----
+image::your_link_to_image[]
+----
+
+image::https://placehold.co/600x400[]
+
+[.columns]
+=== Image Border
+
+[.column.is-half]
+--
+Round image
+
+image::https://placehold.co/200x200[role="round"]
+
+[source,markdown]
+----
+image::....jpg[role="round"]
+----
+--
+
+[.column.is-half]
+--
+Thumbnail
+
+image::https://placehold.co/200x200[role="thumb"]
+
+[source,markdown]
+----
+image::....jpg[role="thumb"]
+----
+--
+
+=== Background image
+
+[source, markdown]
+----
+image::cover.jpg[background, size=cover]
+----
+This will put cover.jpg as the slide’s background image.
+
+image::http://www.develop.in.ua/presenter/assets/arrows_bg_slide.png[background, size=cover]
+
+[background-color="yellow"]
+=== Background color
+
+Yellow background
+
+[source, markdown]
+--
+[background-color="yellow"]
+== Background color
+
+Yellow background
+--

@@ -1,0 +1,137 @@
+=== Paragraphs
+Paragraphs don't require any special markup in AsciiDoc.
+A paragraph is just one or more lines of consecutive text.
+
+To begin a new paragraph, separate it by at least one empty line from the previous paragraph or block.
+
+=== Text format
+
+[.has-text-left]
+--
+Text Formatting **bold text** and _italic_.
+
+Underline [.underline]#text# and [.line-through]#text#
+
+Some `text` or `code` highlight
+
+Some https://google.com[link] example or auto convert http://link.to.site.com
+--
+
+[source, markdown]
+----
+**bold**
+
+_italic_
+
+[.underline]#text#
+
+[.line-through]#text#
+
+`highlight code`
+
+https://google.com[link]
+----
+
+=== Text format
+
+[.has-text-left]
+--
+Use tilde `~` for ~subscript~
+
+Use caret `^` for ^superscript^
+
+[.small]
+Use `[.small]` for smaller text size.
+--
+
+[source, markdown]
+----
+~subscript~
+
+^superscript^
+
+[.small]
+Small text will be here
+----
+
+=== Text alignment
+Text alignment of columns and blocks is also supported.
+
+[.has-text-left]
+You can use `.has-text-left`
+[.has-text-right]
+`.has-text-right` classes for align content
+[.has-text-justified]
+Or `.has-text-justified` lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+[.columns]
+=== Lists
+
+[.column.has-text-left]
+--
+List example:
+
+* Few
+* Bullets
+* Here
+
+[source, markdown]
+----
+* Unordered list item
+* Unordered list item
+* Unordered list item
+----
+--
+
+[.column.has-text-left]
+--
+Number the items:
+
+. One
+. Two
+. Three
+
+[source, markdown]
+----
+. Number list item
+. Number list item
+. Number list item
+----
+--
+
+=== Complex list
+
+[.has-text-left]
+* grandparent list item
++
+--
+** parent list item
+*** child list item
+--
++
+paragraph attached to grandparent list item
+
+
+[source, markdown]
+----
+* grandparent list item
++
+--
+** parent list item
+*** child list item
+--
++
+paragraph attached to grandparent list item
+----
+
+=== Checkbox
+
+- [x] Clone the repo
+- [ ] Install dependencies
+- [x] Build it and check it locally
+
+[source, markdown]
+----
+- [ ] Checkbox
+- [x] Checkbox checked
+----

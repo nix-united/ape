@@ -1,0 +1,102 @@
+[.columns]
+=== Columns
+
+[.column.is-half.has-text-left]
+--
+Use `[.columns]` and `[.column]` for flex layout
+--
+
+[.column.is-half]
+[source, markdown]
+--
+[.columns]
+== Slide title
+
+[.column]
+Column one content
+
+[.column]
+Column two content
+--
+
+[.columns.is-vcentered]
+=== Columns vcenter
+
+[.column.is-half]
+Add `.is-vcentered` class to `[.columns]` for vertical align
+
+[.column.is-half]
+--
+image::https://placehold.co/600x400[]
+--
+
+[.columns.is-vcentered]
+=== Columns size
+
+[.column.has-text-left]
+--
+If you want to change the size of a single column, you can use one of the following classes:
+
+[.small]
+* `is-three-quarters`
+* `is-two-thirds`
+* `is-half`
+* `is-one-third`
+* `is-one-quarter`
+* `is-full-column`
+
+The other columns will fill up the remaining space automatically.
+--
+
+[.column.is-one-third]
+--
+image::ok.png[]
+image::ok.png[]
+image::ok.png[]
+image::ok.png[]
+--
+
+[.columns]
+=== Columns size
+
+[.column.is-one-quarter]
+[source,css]
+--
+.is-one-quarter
+--
+
+[.column.is-three-quarters]
+[source,css]
+--
+.is-three-quarters
+--
+
+[.column.is-one-third]
+[source,css]
+--
+.is-one-third
+--
+
+[.column.is-two-thirds]
+[source,css]
+--
+.is-two-thirds
+--
+
+[.column.is-half]
+[source,css]
+--
+.is-half
+--
+
+[.column.is-half]
+[source,css]
+--
+.is-half
+--
+
+[.column.is-full-column]
+[source,css]
+--
+.is-full-column
+--

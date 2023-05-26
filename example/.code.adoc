@@ -1,0 +1,51 @@
+[.has-text-left]
+=== Code highlight
+
+Use `[source]` block for highlight a code.
+
+[source, markdown]
+--
+.The title (optional)
+[source,javascript]
+----
+const ingredients = [ "lemon", "tomato", "salt", "potato"];
+
+for (const key in ingredients) {
+  console.log( ingredients[key] );
+}
+----
+--
+
+By default, `[source]` blocks and blocks delimited by `----` will be highlighted.
+
+[.columns.has-text-left.is-vcentered]
+=== Code highlight and marks
+
+Also, you can use marks inside a code: `<1>`, `<2>`, etc.
+
+[.column.small]
+[source,javascript]
+--
+for (let i = 0; i < 9; i++) { <1>
+  console.log(i);             <2>
+}
+--
+
+[.column.has-text-left.small]
+--
+<1> The `for` loop
+<2> Just a `console` call
+--
+
+[.column.is-full-column]
+[source, markdown]
+----
+[source,javascript]
+--
+for (let i = 0; i < 9; i++) { \<1>
+  console.log(i); \<2>
+}
+--
+<1> The `for` loop
+<2> Just a `console` call
+----

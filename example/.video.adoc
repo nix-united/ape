@@ -1,0 +1,26 @@
+
+=== Video player
+
+video::9CSp9ZQEtBQ[youtube, start=34, options=autoplay]
+
+[source,markdown]
+----
+# video file
+video::https://my.video/file.mp4[]
+# youtube
+video::9CSp9ZQEtBQ[youtube, start=34, options=autoplay]
+# vimeo
+video::357862493[vimeo, options=autoplay]
+----
+
+[background-video="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",options="loop,muted"]
+=== Background video
+
+[sidebar]
+A background video for a slide can be specified using the background-video element attribute.
+
+[source, markdown]
+----
+[background-video="https://my.video/file.mp4",options="loop,muted"]
+== Nice background!
+----

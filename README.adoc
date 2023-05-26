@@ -44,13 +44,6 @@ ln -s `pwd`/node_modules/reveal.js/ ./javascripts/reveal.js
 [.columns.is-vcentered]
 == Create presentation's structure
 
-[.column.small]
-<1> Create directory for your presentation
-<2> Create subdirectory `images` if you need it
-<3> Create `.settings.adoc` file for reveal.js https://docs.asciidoctor.org/reveal.js-converter/latest/converter/revealjs-options/[configuration]
-<4> Create `index.adoc` file for your presentation. Include settings in the presentation file `include::.settings.adoc[]`
-<5> Add link to your presentations to `.contents.adoc` file (optional)
-
 [.column]
 [source,bash]
 --
@@ -65,6 +58,14 @@ ln -s `pwd`/node_modules/reveal.js/ ./javascripts/reveal.js
     |-- README.adoc
     `-- server.js
 --
+
+[.column.small]
+<1> Create directory for your presentation
+<2> Create subdirectory `images` if you need it
+<3> Create `.settings.adoc` file for reveal.js https://docs.asciidoctor.org/reveal.js-converter/latest/converter/revealjs-options/[configuration]
+<4> Create `index.adoc` file for your presentation. Include settings in the presentation file `include::.settings.adoc[]`
+<5> Add link to your presentations to `.contents.adoc` file (optional)
+
 
 == Create presentation's slides
 

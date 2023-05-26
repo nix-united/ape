@@ -1,0 +1,56 @@
+
+=== Step by step
+
+[%step]
+* this
+* is
+* revealed
+* gradually
+
+=== Style
+
+The style can be changed by using a different role
+
+[.shrink%step]
+[sidebar]
+ONE
+
+[.strike%step]
+[sidebar]
+TWO
+
+[.grow%step]
+[sidebar]
+THREE
+
+=== Order
+
+The order can be changed using the `step` attribute
+
+[TIP,step=3]
+Finally, a pro tip...
+
+[WARNING,step=1]
+First, watch out for...
+
+[IMPORTANT.fade-up,step=2]
+Second, don't forget...
+
+[transition=zoom]
+=== Zoom zoom
+
+This slide will override the presentation transition and zoom!
+
+[source,markdown]
+--
+[transition=zoom]
+=== Zoom zoom
+...
+--
+
+You can choose from `none`, `fade`, `slide`, `convex`, `concave` and `zoom`.
+
+[transition-speed=fast]
+=== Speed
+
+Choose from three transition speeds: default, fast or slow!
