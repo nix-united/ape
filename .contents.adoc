@@ -1,5 +1,4 @@
-include::.settings.adoc[]
+=== Presentations
 
-== Example
-
-* link:./example/index.html[Basic usage]
+* link:./README.html[Manual]
+* link:./example/index.html[Complex example]

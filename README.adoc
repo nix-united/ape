@@ -1,14 +1,15 @@
 include::.settings.adoc[]
 
-= Asciidoc Presentation Engine
+= Asciidoc: Presentation Engine
 
-image::images/ape_logo.png[]
+image::ape_logo.png[]
 
 == Getting started
 
 - [ ] Clone the repo
 - [ ] Install dependencies
-- [ ] Create your presentation's slides
+- [ ] Create presentation's structure
+- [ ] Create presentation's slides
 - [ ] Build it and check it locally
 - [ ] Push your changes to the repo
 - [ ] Enjoy
@@ -31,23 +32,43 @@ npm install
 
 === Underhood
 
-Create symlink to the `/node_modules/reveal.js/` script directory in the `postinstall` hook:
+Create symlink to the `/node_modules/reveal.js/` script directory.
+
+It should be does by the `postinstall` hook:
 
 [source,bash]
 --
 ln -s `pwd`/node_modules/reveal.js/ ./javascripts/reveal.js
 --
 
+[.columns.is-vcentered]
+== Create presentation's structure
+
+[.column.small]
+<1> Create directory for your presentation
+<2> Create subdirectory `images` if you need it
+<3> Create `.settings.adoc` file for reveal.js https://docs.asciidoctor.org/reveal.js-converter/latest/converter/revealjs-options/[configuration]
+<4> Create `index.adoc` file for your presentation. Include settings in the presentation file `include::.settings.adoc[]`
+<5> Add link to your presentations to `.contents.adoc` file (optional)
+
+[.column]
+[source,bash]
+--
+`-- engine/
+    |-- example/
+    |-- my presentation/ <1>
+    |   |-- images/ <2>
+    |   |-- .settings.adoc <3>
+    |   `-- index.adoc <4>
+    |-- .contents.adoc <5>
+    |-- ...
+    |-- README.adoc
+    `-- server.js
+--
+
 == Create presentation's slides
 
 Create your presentation's slides uses https://docs.asciidoctor.org/[asciidoc] format with https://docs.asciidoctor.org/reveal.js-converter/latest/converter/features/[reveal.js features].
-
-* Create directory for your presentation.
-* Create subdirectory `images` if you need it
-* Create `.settings.adoc` file for reveal.js https://docs.asciidoctor.org/reveal.js-converter/latest/converter/revealjs-options/[configuration]
-* Create `.adoc` file for every presentation
-* Include settings in every file `include::.settings.adoc[]`
-* Add link to your presentations to `.contents.adoc` file (optional)
 
 You can see our link:./example/index.adoc[presentation] for more examples of the slides.
 
@@ -55,14 +76,14 @@ Live demo is also available here http://js.pages.nixdev.co/edu/presentations/eng
 
 == Build and review
 
-Convert the `adoc` file to the `html` format and check the result html file in manual:
+Convert the `adoc` file to the `html` format and check the result manually in your browser:
 
 [source,bash]
 --
 npm run build ./index.adoc
 --
 
-Or run web server and observe changes of the file for running converter:
+Or run a web server that will observe changes in the file and refresh the browser automatically:
 
 [source,bash]
 --
@@ -71,7 +92,7 @@ npm start
 npm start ./example/index.adoc
 --
 
-== PDF files
+== Convert to PDF
 
 To convert presentation's slides from HTML to PDF run the following command:
 

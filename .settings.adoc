@@ -11,3 +11,5 @@
 :source-highlighter: highlightjs
 // you can switch to CDN theme, choose one here https://cdnjs.com/libraries/highlight.js
 // :highlightjs-theme: https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/foundation.min.css
+// images directory
+:imagesdir: images

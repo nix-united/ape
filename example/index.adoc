@@ -1,9 +1,17 @@
 include::.settings.adoc[]
 
-= Presentation: engine
+= Presentation: Complex example
 
-:author: JS/UI Team
+:author: author name
 :description: Example of the usage asciidoc presentation engine
+
+== Hotkeys
+
+* use the arrows keys to navigate between the slides
+* press the `S` key to open the speaker view
+* press the `O` key to overview the presentation's slides
+* press the `F` key for full screen
+* press the `Shift` + `?` to show the keyboard shortcuts
 
 == Basic presentation with speaker notes
 
@@ -34,10 +42,6 @@ A Great Story
 * make a point
 --
 
-== Hotkeys
-
-* press the `S` key to open the speaker view
-* press the `O` key to observe the presentation's slides
 
 == Vertical slides
 
@@ -372,10 +376,10 @@ The other columns will fill up the remaining space automatically.
 
 [.column.is-one-third]
 --
-image::https://placehold.co/100x100[]
-image::https://placehold.co/100x100[]
-image::https://placehold.co/100x100[]
-image::https://placehold.co/100x100[]
+image::ok.png[]
+image::ok.png[]
+image::ok.png[]
+image::ok.png[]
 --
 
 [.columns]

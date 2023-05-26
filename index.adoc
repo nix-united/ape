@@ -1,12 +1,21 @@
 include::.settings.adoc[]
 
-= Education center
+= Asciidoc: Presentation Engine
 
-== Materials
+image::ape_logo.png[width=200]
+
+:author: JS/UI Team
+:description: Asciidoc Presentation Engine based on reveal.js
+
+== Contents
 
 include::.contents.adoc[]
 
-== NIX
+== Credits
 
-[discrete]
-=== 🇺🇦
+=== Projects
+* link:https://github.com/asciidoctor[asciidoctor] text processor
+* link:https://github.com/hakimel/reveal.js[reveal.js] HTML presentation framework
+* link:https://github.com/astefanutti/decktape[decktape] PDF exporter
+
+== 🇺🇦
