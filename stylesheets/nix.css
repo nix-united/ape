@@ -712,3 +712,19 @@ table .title, .listingblock .title {
     background-color: #cfe2ff;
     border: 1px solid #b6d4fe;
 }
+
+.reveal .overline {
+  text-decoration: overline;
+}
+
+.reveal .nobreak {
+  white-space: pre;
+}
+
+.reveal .nowrap {
+  white-space: nowrap;
+}
+
+.reveal .pre-wrap {
+  white-space: pre-wrap;
+}
