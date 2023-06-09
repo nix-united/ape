@@ -35,8 +35,6 @@ pages:
     - cp -r javascripts .public
     - cp -r stylesheets .public
     - cp -r node_modules/reveal.js .public/javascripts
-    - cp -r node_modules/reveal.js-copycode/plugin/copycode .public/javascripts/reveal.js/plugin
-    - cp -r node_modules/reveal.js-mermaid-plugin/plugin/mermaid .public/javascripts/reveal.js/plugin
     # copy all HTML files
     - find . -type f -not -path '*/\.*' -not -path './node_modules/*' -not -path './common/*' -name "*.html" -exec cp --parents -t "./.public" {} +
     # copy all images directories
