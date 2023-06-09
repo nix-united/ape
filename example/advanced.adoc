@@ -1,0 +1,120 @@
+include::.settings.adoc[]
+
+:docinfo: private
+
+== Plugins ==
+
+=== Plugins ===
+
+For uses plugins, you should enable docinfo
+and create file `%filename%-docinfo-footer.html`
+
+[source, markdown]
+----
+:docinfo: private
+----
+
+.%filename%-docinfo-footer.html
+[source, html]
+----
+<script src="/javascripts/plugin/mermaid/mermaid.js"></script>
+<script src="/javascripts/plugin/copycode/copycode.js"></script>
+<script>
+    Reveal.configure({
+        // mermaid: {},
+        // copycode: {},
+    })
+    Reveal.registerPlugin(RevealMermaid)
+    Reveal.registerPlugin(CopyCode)
+</script>
+----
+
+== Math ==
+// required !
+:stem:
+
+=== Meth ===
+
+This is the build-in plugin, just enable it and use.
+
+[source, markdown]
+----
+:stem:
+----
+
+=== Math ===
+
+[stem]
+++++
+sqrt(4) = 2
+++++
+
+Water (stem:[H_2O]) is a critical component.
+
+A matrix can be written as stem:[[[a,b\],[c,d\]\]((n),(k))].
+
+[.small]
+[source, markdown]
+----
+:stem:
+
+[stem]
+++++
+sqrt(4) = 2
+++++
+
+Water (stem:[H_2O]) is a critical component.
+
+A matrix can be written as stem:[[[a,b\],[c,d\]\]((n),(k))].
+----
+
+== Diagram ==
+
+=== Diagram ===
+
+[.mermaid]
+....
+sequenceDiagram
+    participant Alice
+    participant Bob
+    Alice->>Bob: Hello Bob, how are you?
+    Bob-->>Alice: Great!
+....
+
+[source, markdown]
+----
+[.mermaid]
+....
+sequenceDiagram
+    participant Alice
+    participant Bob
+    Alice->>Bob: Hello Bob, how are you?
+    Bob-->>Alice: Great!
+....
+----
+
+=== Diagram ===
+
+[.mermaid]
+....
+graph LR
+    s([Source]) --> a[[aquamarine]]
+    r[[rustdoc]] --> f([Docs w/ Mermaid!])
+    subgraph rustc[Rust Compiler]
+    a -. inject mermaid.js .-> r
+    end
+....
+
+
+[source, markdown]
+----
+[.mermaid]
+....
+graph LR
+    s([Source]) --> a[[aquamarine]]
+    r[[rustdoc]] --> f([Docs w/ Mermaid!])
+    subgraph rustc[Rust Compiler]
+    a -. inject mermaid.js .-> r
+    end
+....
+----

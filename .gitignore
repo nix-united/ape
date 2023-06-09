@@ -4,3 +4,6 @@ node_modules
 public
 *.html
 *.pdf
+
+!*-docinfo-footer.html
+!/example/advanced-docinfo-footer.html

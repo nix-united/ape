@@ -4,3 +4,4 @@
 
 * xref:./README.adoc[APE manual]
 * xref:./example/index.adoc[Complex example]
+* xref:./example/advanced.adoc[Advanced usage]

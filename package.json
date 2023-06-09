@@ -12,7 +12,9 @@
     "@asciidoctor/reveal.js": "^5.0.0-rc.1",
     "asciidoctor": "^2.2.6",
     "browser-sync": "^2.29.1",
-    "decktape": "^3.7.0"
+    "decktape": "^3.7.0",
+    "reveal.js-copycode": "^1.1.1",
+    "reveal.js-mermaid-plugin": "^1.1.0"
   },
   "scripts": {
     "postinstall": "ln -s `pwd`/node_modules/reveal.js/ ./javascripts/reveal.js",
