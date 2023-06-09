@@ -17,8 +17,8 @@ and create file `docinfo-footer.html`
 .docinfo-footer.html
 [source, html]
 ----
-<script src="/javascripts/reveal.js/plugin/mermaid/mermaid.js"></script>
-<script src="/javascripts/reveal.js/plugin/copycode/copycode.js"></script>
+<script src="./../javascripts/reveal.js/plugin/mermaid/mermaid.js"></script>
+<script src="./../javascripts/reveal.js/plugin/copycode/copycode.js"></script>
 <script>
     Reveal.configure({
         // mermaid: {},
@@ -33,7 +33,7 @@ and create file `docinfo-footer.html`
 // required !
 :stem:
 
-=== Meth
+=== Math
 
 This is the build-in plugin, just enable it and use.
 
