@@ -29,7 +29,7 @@ convertFile(adocFile)
  */
 function convertFile (file) {
   console.log(`Convert file: '${file}'`)
-  asciidoctor.convertFile(file, { safe: 'safe', backend: 'revealjs' })
+  asciidoctor.convertFile(file, { safe: 'unsafe', backend: 'revealjs' })
 }
 
 /**

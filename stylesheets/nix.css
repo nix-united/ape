@@ -683,31 +683,36 @@ table .title, .listingblock .title {
     margin: auto 0 auto auto;
 }
 
-.admonitionblock.warning {
+.label {
+    padding: 0.2em 0.2em;
+    border-radius: 0.25em;
+}
+
+.warning {
     color: #663803;
     background-color: #fff3cd;
     border: 1px solid #fee8a5;
 }
 
-.admonitionblock.note {
+.note {
     color: #0f5132;
     background-color: #d1e7dd;
     border: 1px solid #badbcc;
 }
 
-.admonitionblock.important {
+.important {
     color: #842029;
     border: 1px solid #f5c2c7;
     background-color: #f8d7da;
 }
 
-.admonitionblock.caution {
+.caution {
     color: #8e4904;
     background-color: #ffe9cd;
     border: 1px solid #ffbf83;
 }
 
-.admonitionblock.tip {
+.tip {
     color: #084298;
     background-color: #cfe2ff;
     border: 1px solid #b6d4fe;

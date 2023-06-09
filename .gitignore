@@ -5,5 +5,6 @@ public
 *.html
 *.pdf
 
-!*-docinfo-footer.html
-!/example/advanced-docinfo-footer.html
+!common/docinfo.html
+!common/docinfo-header.html
+!common/docinfo-footer.html

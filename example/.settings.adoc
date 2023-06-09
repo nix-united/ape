@@ -1,6 +1,8 @@
 // List of the all options you can find here
 // https://docs.asciidoctor.org/reveal.js-converter/latest/converter/revealjs-options/
 
+// locating docinfo files
+:docinfodir: ../common
 // favicon
 :favicon: ./../images/icons/icon.png
 // you can switch to any theme from list https://highlightjs.org/static/demo/

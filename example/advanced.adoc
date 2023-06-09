@@ -1,24 +1,24 @@
 include::.settings.adoc[]
 
-:docinfo: private
+:docinfo: shared
 
-== Plugins ==
+== Plugins
 
-=== Plugins ===
+=== Plugins
 
-For uses plugins, you should enable docinfo
-and create file `%filename%-docinfo-footer.html`
+For uses plugins, you should https://docs.asciidoctor.org/asciidoc/latest/docinfo/#enable[enable docinfo]
+and create file `docinfo-footer.html`
 
 [source, markdown]
 ----
-:docinfo: private
+:docinfo: shared
 ----
 
-.%filename%-docinfo-footer.html
+.docinfo-footer.html
 [source, html]
 ----
-<script src="/javascripts/plugin/mermaid/mermaid.js"></script>
-<script src="/javascripts/plugin/copycode/copycode.js"></script>
+<script src="/javascripts/reveal.js/plugin/mermaid/mermaid.js"></script>
+<script src="/javascripts/reveal.js/plugin/copycode/copycode.js"></script>
 <script>
     Reveal.configure({
         // mermaid: {},
@@ -29,11 +29,11 @@ and create file `%filename%-docinfo-footer.html`
 </script>
 ----
 
-== Math ==
+== Math
 // required !
 :stem:
 
-=== Meth ===
+=== Meth
 
 This is the build-in plugin, just enable it and use.
 
@@ -42,7 +42,7 @@ This is the build-in plugin, just enable it and use.
 :stem:
 ----
 
-=== Math ===
+=== Math
 
 [stem]
 ++++
@@ -68,9 +68,9 @@ Water (stem:[H_2O]) is a critical component.
 A matrix can be written as stem:[[[a,b\],[c,d\]\]((n),(k))].
 ----
 
-== Diagram ==
+== Diagram
 
-=== Diagram ===
+=== Diagram
 
 [.mermaid]
 ....
@@ -93,7 +93,7 @@ sequenceDiagram
 ....
 ----
 
-=== Diagram ===
+=== Diagram
 
 [.mermaid]
 ....
@@ -116,5 +116,47 @@ graph LR
     subgraph rustc[Rust Compiler]
     a -. inject mermaid.js .-> r
     end
+....
+----
+
+=== Diagram
+
+[.mermaid]
+....
+---
+title: Example Git diagram
+---
+gitGraph
+   commit
+   commit
+   branch develop
+   checkout develop
+   commit
+   commit
+   checkout main
+   merge develop
+   commit
+   commit
+....
+
+[.small]
+[source, markdown]
+----
+[.mermaid]
+....
+---
+title: Example Git diagram
+---
+gitGraph
+   commit
+   commit
+   branch develop
+   checkout develop
+   commit
+   commit
+   checkout main
+   merge develop
+   commit
+   commit
 ....
 ----

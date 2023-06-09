@@ -32,6 +32,7 @@ pages:
     - find . -type f -not -path '*/\.*' -not -path '*/node_modules/*' -name "*.html"
     # prepare directory with resources for web
     - mkdir .public
+    - mv common .public
     - cp -r javascripts .public
     - cp -r stylesheets .public
     - cp -r node_modules/reveal.js .public/javascripts

@@ -17,7 +17,7 @@
     "reveal.js-mermaid-plugin": "^1.1.0"
   },
   "scripts": {
-    "postinstall": "ln -s `pwd`/node_modules/reveal.js/ ./javascripts/reveal.js",
+    "postinstall": "ln -s `pwd`/node_modules/reveal.js/ ./javascripts/reveal.js && ln -s `pwd`/node_modules/reveal.js-copycode/plugin/copycode ./javascripts/reveal.js/plugin/copycode && ln -s `pwd`/node_modules/reveal.js-mermaid-plugin/plugin/mermaid ./javascripts/reveal.js/plugin/mermaid",
     "build": "asciidoctor-revealjs",
     "prestart": "asciidoctor-revealjs *.adoc */*.adoc",
     "pdf": "decktape"

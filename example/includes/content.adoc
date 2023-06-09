@@ -53,6 +53,8 @@ NOTE: Note to yourself
 [.columns]
 === Icon's macro
 
+You can use
+
 [.column.is-full-column]
 --
 
@@ -78,6 +80,13 @@ icon:heart[2x,role=red]
 icon:tags[] ruby, asciidoctor
 ----
 --
+
+=== Labels + Icons
+
+[.label.note]#icon:tags[] php#
+
+[.label.warning]#icon:tags[] ruby#
+
 
 === Quoted block
 
