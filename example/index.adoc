@@ -95,7 +95,7 @@ include::includes/typography.adoc[]
 
 == Code
 
-include::includes/code.adoc[
+include::includes/code.adoc[]
 
 == Math
 
