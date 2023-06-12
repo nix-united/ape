@@ -95,7 +95,11 @@ include::includes/typography.adoc[]
 
 == Code
 
-include::includes/code.adoc[]
+include::includes/code.adoc[
+
+== Math
+
+include::includes/math.adoc[]
 
 == Content
 
@@ -137,5 +141,3 @@ include::includes/animation.adoc[]
 
 [discrete] 
 === 🇺🇦
-
-

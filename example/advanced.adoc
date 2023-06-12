@@ -29,49 +29,50 @@ and create file `docinfo-footer.html`
 </script>
 ----
 
-== Math
-// required !
-:stem:
-
-=== Math
-
-This is the build-in plugin, just enable it and use.
-
-[source, markdown]
-----
-:stem:
-----
-
-=== Math
-
-[stem]
-++++
-sqrt(4) = 2
-++++
-
-Water (stem:[H_2O]) is a critical component.
-
-A matrix can be written as stem:[[[a,b\],[c,d\]\]((n),(k))].
-
-[.small]
-[source, markdown]
-----
-:stem:
-
-[stem]
-++++
-sqrt(4) = 2
-++++
-
-Water (stem:[H_2O]) is a critical component.
-
-A matrix can be written as stem:[[[a,b\],[c,d\]\]((n),(k))].
-----
-
 == Diagram
 
 === Diagram
 
+We use https://mermaid.js.org/[mermaid engine] to render diagrams, charts, etc.
+
+[.mermaid]
+....
+graph LR
+    A[Square Rect] -- Link text --> B((Circle))
+    A --> C(Round Rect)
+    B --> D{Rhombus}
+    C --> D
+....
+
+=== Diagram: pie chart
+
+[.mermaid]
+....
+%%{init: {"pie": {"textPosition": 0.5}, "themeVariables": {"pieOuterStrokeWidth": "5px"}} }%%
+pie showData
+    title Key elements in Product X
+    "Calcium" : 42.96
+    "Potassium" : 50.05
+    "Magnesium" : 10.01
+    "Iron" :  5
+....
+
+[source, markdown]
+----
+[.mermaid]
+....
+%%{init: {"pie": {"textPosition": 0.5}, "themeVariables": {"pieOuterStrokeWidth": "5px"}} }%%
+pie showData
+    title Key elements in Product X
+    "Calcium" : 42.96
+    "Potassium" : 50.05
+    "Magnesium" : 10.01
+    "Iron" :  5
+....
+----
+
+=== Diagram: sequence
+
 [.mermaid]
 ....
 sequenceDiagram
@@ -93,7 +94,7 @@ sequenceDiagram
 ....
 ----
 
-=== Diagram
+=== Diagram: graph
 
 [.mermaid]
 ....
@@ -119,7 +120,7 @@ graph LR
 ....
 ----
 
-=== Diagram
+=== Diagram: git graph
 
 [.mermaid]
 ....

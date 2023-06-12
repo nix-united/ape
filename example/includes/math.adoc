@@ -1,0 +1,37 @@
+=== Math
+
+// required !
+:stem:
+
+This is the build-in plugin, just enable it and use.
+
+[source, markdown]
+----
+:stem:
+----
+
+=== Math
+
+[stem]
+++++
+sqrt(4) = 2
+++++
+
+Water (stem:[H_2O]) is a critical component.
+
+A matrix can be written as stem:[[[a,b\],[c,d\]\]((n),(k))].
+
+[.small]
+[source, markdown]
+----
+:stem:
+
+[stem]
+++++
+sqrt(4) = 2
+++++
+
+Water (stem:[H_2O]) is a critical component.
+
+A matrix can be written as stem:[[[a,b\],[c,d\]\]((n),(k))].
+----
