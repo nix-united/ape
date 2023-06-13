@@ -14,10 +14,11 @@
     "browser-sync": "^2.29.1",
     "decktape": "^3.7.0",
     "reveal.js-copycode": "^1.1.1",
+    "reveal.js-menu": "^2.1.0",
     "reveal.js-mermaid-plugin": "^1.1.0"
   },
   "scripts": {
-    "postinstall": "ln -s `pwd`/node_modules/reveal.js/ ./javascripts/reveal.js && cp -r `pwd`/node_modules/reveal.js-copycode/plugin/copycode ./javascripts/reveal.js/plugin/copycode && cp -r `pwd`/node_modules/reveal.js-mermaid-plugin/plugin/mermaid ./javascripts/reveal.js/plugin/mermaid",
+    "postinstall": "ln -s `pwd`/node_modules/reveal.js/ ./javascripts/reveal.js && cp -r `pwd`/node_modules/reveal.js-menu ./javascripts/reveal.js/plugin/menu && cp -r `pwd`/node_modules/reveal.js-copycode/plugin/copycode ./javascripts/reveal.js/plugin/copycode && cp -r `pwd`/node_modules/reveal.js-mermaid-plugin/plugin/mermaid ./javascripts/reveal.js/plugin/mermaid",
     "build": "asciidoctor-revealjs",
     "prestart": "asciidoctor-revealjs *.adoc */*.adoc",
     "pdf": "decktape"

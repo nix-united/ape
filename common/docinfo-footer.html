@@ -1,14 +1,40 @@
 <!-- docinfo footer -->
-<script src="./../javascripts/reveal.js/plugin/mermaid/mermaid.js"></script>
 <script src="./../javascripts/reveal.js/plugin/copycode/copycode.js"></script>
+<script src="./../javascripts/reveal.js/plugin/mermaid/mermaid.js"></script>
+<script src="./../javascripts/reveal.js/plugin/menu/menu.js"></script>
 <script>
     Reveal.configure({
-        // mermaid: {},
+        // @link https://github.com/Martinomagnifico/reveal.js-copycode#global-options
         copycode: {
             button: "hover",
-            display: "icons"
+            display: "icons",
+            style: {
+                copybg: "#204060",
+                copiedbg: "#369",
+                copycolor: "white",
+                copiedcolor: "white"
+            },
+        },
+        // @link https://github.com/denehyg/reveal.js-menu#configuration
+        menu: {
+            themes: [
+                {
+                    name: 'NIX',
+                    theme: './../stylesheets/nix.css'
+                },
+                {
+                  name: 'Black',
+                  theme: './../javascripts/reveal.js/dist/theme/black.css',
+                  highlightTheme: './../javascripts/reveal.js/plugin/highlight/monokai.css'
+                }
+            ]
+        },
+        // @link https://github.com/zjffun/reveal.js-mermaid-plugin
+        mermaid: {
+
         },
     })
-    Reveal.registerPlugin(RevealMermaid)
     Reveal.registerPlugin(CopyCode)
+    Reveal.registerPlugin(RevealMenu)
+    Reveal.registerPlugin(RevealMermaid)
 </script>
