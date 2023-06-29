@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@asciidoctor/core": "^2.2.6",
-    "@asciidoctor/reveal.js": "^5.0.0-rc.1",
+    "@asciidoctor/reveal.js": "^5.0.1",
     "asciidoctor": "^2.2.6",
     "browser-sync": "^2.29.1",
     "decktape": "^3.7.0",
