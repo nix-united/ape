@@ -52,7 +52,7 @@ pages:
 export:
   stage: export
   image:
-    name: astefanutti/decktape:3.7
+    name: astefanutti/decktape:3.9
     entrypoint: [""]
   script:
     - mkdir export
