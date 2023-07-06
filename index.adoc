@@ -1,31 +1,17 @@
 // List of the all options you can find here
 // https://docs.asciidoctor.org/reveal.js-converter/latest/converter/revealjs-options/
-
-// locating docinfo files
-:docinfodir: ./common
 // favicon
 :favicon: ./images/icons/icon.png
-// you can switch to any theme from list https://highlightjs.org/static/demo/
-// just choose one from CDN here https://cdnjs.com/libraries/highlight.js
-// :highlightjs-theme: https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/foundation.min.css
-// enable image-based icons
-:icons: font
-// images directory
-:imagesdir: images
 // use the local library, or you can switch to CDN
 :revealjsdir: ./javascripts/reveal.js
 // use custom NIX theme
-// or create your own theme https://github.com/hakimel/reveal.js/tree/4.5.0/css/theme
 :revealjs_customtheme: ./stylesheets/nix.css
-:revealjs_hash: true
-:revealjs_slideNumber: false
-:revealjs_transition: fade
 // highlight js settings
 :source-highlighter: highlightjs
 
 = Asciidoc: Presentation Engine
 
-image::ape_logo.png[width=200]
+image::images/ape_logo.png[width=200]
 
 :author: JS/UI Team
 :description: Asciidoc Presentation Engine based on reveal.js
@@ -38,7 +24,7 @@ include::.contents.adoc[]
 
 === Projects
 * link:https://github.com/asciidoctor[asciidoctor] text processor
-* link:https://github.com/hakimel/reveal.js[reveal.js] the HTML presentation framework
+* link:https://github.com/hakimel/reveal.js[reveal.js] HTML presentation framework
 * link:https://github.com/astefanutti/decktape[decktape] PDF exporter
 
 == 🇺🇦

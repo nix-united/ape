@@ -1,8 +1,17 @@
-include::.settings.adoc[]
+// List of the all options you can find here
+// https://docs.asciidoctor.org/reveal.js-converter/latest/converter/revealjs-options/
+// favicon
+:favicon: ./images/icons/icon.png
+// use the local library, or you can switch to CDN
+:revealjsdir: ./javascripts/reveal.js
+// use custom NIX theme
+:revealjs_customtheme: ./stylesheets/nix.css
+// highlight js settings
+:source-highlighter: highlightjs
 
 = Asciidoc: Presentation Engine
 
-image::ape_logo.png[]
+image::images/ape_logo.png[]
 
 == Getting started
 
@@ -23,7 +32,7 @@ git clone https://gitlab.nixdev.co/js/edu/presentations/engine.git
 
 == Install dependencies
 
-Installs the package and any packages that it depends on:
+Install the package and any packages that it depends on:
 
 [source,bash]
 --
@@ -69,7 +78,7 @@ ln -s `pwd`/node_modules/reveal.js/ ./javascripts/reveal.js
 
 == Create presentation's slides
 
-Create your presentation's slides uses https://docs.asciidoctor.org/[asciidoc] format with https://docs.asciidoctor.org/reveal.js-converter/latest/converter/features/[reveal.js features].
+Create your presentation slides uses https://docs.asciidoctor.org/[asciidoc] format with https://docs.asciidoctor.org/reveal.js-converter/latest/converter/features/[reveal.js features].
 
 You can see our link:./example/index.adoc[presentation] for more examples of the slides.
 
