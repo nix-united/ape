@@ -49,7 +49,6 @@ jobs:
           mkdir .public
           cp -r javascripts .public
           cp -r stylesheets .public
-          cp -r node_modules/reveal.js .public/javascripts
       - name: Copy all HTML files
         run: find . -type f -not -path '*/\.*' -not -path './node_modules/*' -not -path './common/*' -name "*.html" -exec cp --parents -t "./.public" {} +
       - name: Copy all images directories
