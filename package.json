@@ -1,11 +1,11 @@
 {
   "name": "asciidoc-presentation-engine",
   "description": "Asciidoc presentation engine",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "author": "Anton Shevchuk <anton.shevchuk@nixs.com>, Maksym Medvediev <maksym.medvediev@nixs.com>",
   "repository": {
     "type": "git",
-    "url": "https://gitlab.nixdev.co/js/edu/presentations/engine.git"
+    "url": "https://github.com/nix-group/ape.git"
   },
   "dependencies": {
     "@asciidoctor/core": "^2.2.6",
