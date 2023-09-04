@@ -27,7 +27,7 @@ image::images/ape_logo.png[]
 
 [source,bash]
 --
-git clone https://github.com/nix-group/ape.git
+git clone https://github.com/nix-united/ape.git
 --
 
 == Install dependencies
@@ -82,7 +82,7 @@ Create your presentation slides uses https://docs.asciidoctor.org/[asciidoc] for
 
 You can see our link:./example/index.adoc[presentation] for more examples of the slides.
 
-Live demo is also available here https://nix-group.github.io/ape/
+Live demo is also available here https://nix-united.github.io/ape/
 
 == Build and review
 

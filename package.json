@@ -5,7 +5,7 @@
   "author": "Anton Shevchuk <anton.shevchuk@nixs.com>, Maksym Medvediev <maksym.medvediev@nixs.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nix-group/ape.git"
+    "url": "https://github.com/nix-united/ape.git"
   },
   "dependencies": {
     "@asciidoctor/core": "^2.2.6",
