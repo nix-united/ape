@@ -39,7 +39,7 @@ Install the package and any packages that it depends on:
 npm install
 --
 
-=== Underhood
+=== Under hood
 
 Create symlink to the `/node_modules/reveal.js/` script directory.
 
@@ -73,7 +73,7 @@ ln -s `pwd`/node_modules/reveal.js/ ./javascripts/reveal.js
 <2> Create subdirectory `images` if you need it
 <3> Create `.settings.adoc` file for reveal.js https://docs.asciidoctor.org/reveal.js-converter/latest/converter/revealjs-options/[configuration]
 <4> Create `index.adoc` file for your presentation. Include settings in the presentation file `include::.settings.adoc[]`
-<5> Add link to your presentations to `.contents.adoc` file (optional)
+<5> Add the link to your presentations to `.contents.adoc` file (optional)
 
 
 == Create presentation's slides
@@ -104,7 +104,7 @@ npm start ./example/index.adoc
 
 == Convert to PDF
 
-To convert presentation's slides from HTML to PDF run the following command:
+To convert presentation's slides from HTML to PDF, run the following command:
 
 [source,bash]
 --

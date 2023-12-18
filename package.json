@@ -1,21 +1,21 @@
 {
   "name": "asciidoc-presentation-engine",
   "description": "Asciidoc presentation engine",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "author": "Anton Shevchuk <anton.shevchuk@nixs.com>, Maksym Medvediev <maksym.medvediev@nixs.com>",
   "repository": {
     "type": "git",
     "url": "https://github.com/nix-united/ape.git"
   },
   "dependencies": {
-    "@asciidoctor/core": "^2.2.6",
-    "@asciidoctor/reveal.js": "^5.0.1",
-    "asciidoctor": "^2.2.6",
-    "browser-sync": "^2.29.1",
-    "decktape": "^3.7.0",
+    "@asciidoctor/core": "^3.0.2",
+    "@asciidoctor/reveal.js": "^5.1.0",
+    "asciidoctor": "^3.0.2",
+    "browser-sync": "^2.23.7",
+    "decktape": "^3.10.0",
     "reveal.js-copycode": "^1.1.1",
     "reveal.js-menu": "^2.1.0",
-    "reveal.js-mermaid-plugin": "^1.1.0"
+    "reveal.js-mermaid-plugin": "^2.0.0"
   },
   "scripts": {
     "postinstall": "ln -s `pwd`/node_modules/reveal.js/ ./javascripts/reveal.js && cp -r `pwd`/node_modules/reveal.js-menu ./javascripts/reveal.js/plugin/menu && cp -r `pwd`/node_modules/reveal.js-copycode/plugin/copycode ./javascripts/reveal.js/plugin/copycode && cp -r `pwd`/node_modules/reveal.js-mermaid-plugin/plugin/mermaid ./javascripts/reveal.js/plugin/mermaid",
