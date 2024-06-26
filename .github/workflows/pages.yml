@@ -58,8 +58,13 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
           path: './public'
+      - name: Verify artifact upload
+        run: |
+          if [ -z "$(ls -A ./public)" ]; then
+            echo "No files found in public directory, upload will fail."
+            exit 1
+          fi
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v3
