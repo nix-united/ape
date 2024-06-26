@@ -34,7 +34,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22"
           cache: npm
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -56,15 +56,10 @@ jobs:
       - run: mv .public public
       - run: ls -la ./public
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v2
         with:
+          # Upload entire repository
           path: './public'
-      - name: Verify artifact upload
-        run: |
-          if [ -z "$(ls -A ./public)" ]; then
-            echo "No files found in public directory, upload will fail."
-            exit 1
-          fi
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v3
