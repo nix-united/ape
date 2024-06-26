@@ -1,4 +1,4 @@
-# Workflow for generate and deploy static content to GitHub Pages
+# Workflow for generating and deploy static content to GitHub Pages
 name: Deploy static content to Pages
 
 on:
