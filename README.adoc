@@ -4,7 +4,7 @@
 :favicon: ./images/icons/icon.png
 // use the local library, or you can switch to CDN
 :revealjsdir: ./javascripts/reveal.js
-// use custom NIX theme
+// use a custom NIX theme
 :revealjs_customtheme: ./stylesheets/nix.css
 // highlight js settings
 :source-highlighter: highlightjs
@@ -69,7 +69,7 @@ ln -s `pwd`/node_modules/reveal.js/ ./javascripts/reveal.js
 --
 
 [.column.small]
-<1> Create directory for your presentation
+<1> Create a directory for your presentation
 <2> Create subdirectory `images` if you need it
 <3> Create `.settings.adoc` file for reveal.js https://docs.asciidoctor.org/reveal.js-converter/latest/converter/revealjs-options/[configuration]
 <4> Create `index.adoc` file for your presentation. Include settings in the presentation file `include::.settings.adoc[]`
@@ -78,7 +78,7 @@ ln -s `pwd`/node_modules/reveal.js/ ./javascripts/reveal.js
 
 == Create presentation's slides
 
-Create your presentation slides uses https://docs.asciidoctor.org/[asciidoc] format with https://docs.asciidoctor.org/reveal.js-converter/latest/converter/features/[reveal.js features].
+Create your presentation slides uses https://docs.asciidoctor.org/[AsciiDoc] format with https://docs.asciidoctor.org/reveal.js-converter/latest/converter/features/[reveal.js features].
 
 You can see our link:./example/index.adoc[presentation] for more examples of the slides.
 
