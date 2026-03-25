@@ -40,26 +40,15 @@ jobs:
         uses: actions/configure-pages@v5
       - name: Install dependencies
         run: npm ci
-      - name: Generate HTML files from asciidoc
-        run: npm run build *.adoc */*.adoc
-      - name: List of the result HTML files
-        run: find . -type f -not -path '*/\.*' -not -path '*/node_modules/*' -name "*.html"
-      - name: Prepare directory with resources for web
-        run: |
-          mkdir .public
-          cp -r javascripts .public
-          cp -r stylesheets .public
-      - name: Copy all HTML files
-        run: find . -type f -not -path '*/\.*' -not -path './node_modules/*' -not -path './common/*' -name "*.html" -exec cp --parents -t "./.public" {} +
-      - name: Copy all images directories
-        run: find . -type d -name "images" -not -path '*/\.*' -not -path './node_modules/*' -exec cp -r --parents -t "./.public" {} +
-      - run: mv .public public
-      - run: ls -la ./public
+      - name: Build presentations and copy assets
+        run: npm run copy-assets && npm run build *.adoc */*.adoc
+      - name: List result HTML files
+        run: find dist -type f -name "*.html"
+      - run: ls -la ./dist
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
-          path: './public'
+          path: './dist'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

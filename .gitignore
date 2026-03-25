@@ -1,10 +1,5 @@
 .idea
-javascripts/reveal.js
 node_modules
 public
-*.html
+dist
 *.pdf
-
-!common/docinfo.html
-!common/docinfo-header.html
-!common/docinfo-footer.html

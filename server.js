@@ -3,6 +3,7 @@ const asciidoctor = require('@asciidoctor/core')()
 const asciidoctorRevealjs = require('@asciidoctor/reveal.js')
 asciidoctorRevealjs.register()
 
+const { execFileSync } = require('child_process')
 const browserSync = require('browser-sync')
 const bs = browserSync.create()
 
@@ -20,6 +21,9 @@ if (!adocFile.endsWith('.adoc')) {
   return
 }
 
+// Copy assets to dist/
+execFileSync('node', ['scripts/copy-assets.js'], { stdio: 'inherit' })
+
 convertFile(adocFile)
 
 /**
@@ -29,7 +33,7 @@ convertFile(adocFile)
  */
 function convertFile (file) {
   console.log(`Convert file: '${file}'`)
-  asciidoctor.convertFile(file, { safe: 'unsafe', backend: 'revealjs' })
+  asciidoctor.convertFile(file, { safe: 'unsafe', backend: 'revealjs', to_dir: 'dist' })
 }
 
 /**
@@ -59,6 +63,6 @@ bs.watch(
 ).on('change', watchCallback)
 
 bs.init({
-  server: true,
+  server: 'dist',
   startPath: adocFile.replace('.adoc', '.html')
 })

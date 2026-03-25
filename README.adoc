@@ -39,17 +39,6 @@ Install the package and any packages that it depends on:
 npm install
 --
 
-=== Under hood
-
-Create symlink to the `/node_modules/reveal.js/` script directory.
-
-It should be does by the `postinstall` hook:
-
-[source,bash]
---
-ln -s `pwd`/node_modules/reveal.js/ ./javascripts/reveal.js
---
-
 [.columns.is-vcentered]
 == Create presentation's structure
 
@@ -86,11 +75,11 @@ Live demo is also available here https://nix-united.github.io/ape/
 
 == Build and review
 
-Convert the `adoc` file to the `html` format and check the result manually in your browser:
+Convert all `adoc` files to the `html` format in the `dist/` directory:
 
 [source,bash]
 --
-npm run build ./index.adoc
+npm run build
 --
 
 Or run a web server that will observe changes in the file and refresh the browser automatically:
@@ -104,11 +93,11 @@ npm start ./example/index.adoc
 
 == Convert to PDF
 
-To convert presentation's slides from HTML to PDF, run the following command:
+To convert all presentations from HTML to PDF:
 
 [source,bash]
 --
-npm run pdf ./index.html ./index.pdf
+npm run pdf
 --
 
 == Push your changes

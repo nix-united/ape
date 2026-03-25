@@ -26,21 +26,12 @@ build:
 pages:
   stage: deploy
   script:
-    # generate HTML files from asciidoc
-    - npm run build *.adoc */*.adoc
+    # build presentations and copy assets to dist/
+    - npm run copy-assets && npm run build *.adoc */*.adoc
     # list of the result
-    - find . -type f -not -path '*/\.*' -not -path '*/node_modules/*' -name "*.html"
-    # prepare directory with resources for web
-    - mkdir .public
-    - cp -r javascripts .public
-    - cp -r stylesheets .public
-    - cp -r node_modules/reveal.js .public/javascripts
-    # copy all HTML files
-    - find . -type f -not -path '*/\.*' -not -path './node_modules/*' -not -path './common/*' -name "*.html" -exec cp --parents -t "./.public" {} +
-    # copy all images directories
-    - find . -type d -name "images" -not -path '*/\.*' -not -path './node_modules/*' -exec cp -r --parents -t "./.public" {} +
-    # rename to public, this is required for generate artifacts
-    - mv .public public
+    - find dist -type f -name "*.html"
+    # rename to public, this is required for GitLab Pages artifacts
+    - mv dist public
     - ls -la ./public
   artifacts:
     paths:
@@ -61,7 +52,7 @@ export:
     - |+
       for file in $(find ./public -type f -not -path '*/\.*' -not -path './public/javascripts/*' -name "*.html")
       do
-        node /decktape/decktape.js --chrome-path chromium-browser $file "./export/${file:9:length-5}.pdf"
+        node /decktape/decktape.js --chrome-path chromium-browser "$file" "./export/${file:9:length-5}.pdf"
       done
   artifacts:
     paths:

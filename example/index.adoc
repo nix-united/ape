@@ -5,7 +5,7 @@ include::.settings.adoc[]
 = Presentation: Complex example
 
 :author: author name
-:description: Example of the usage asciidoc presentation engine
+:description: Example of the usage AsciiDoc presentation engine
 
 == Hotkeys
 
