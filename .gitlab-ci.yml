@@ -1,6 +1,6 @@
 # Official framework image. Look for the different tagged releases at:
 # https://hub.docker.com/r/library/node/tags/
-image: node:18.16.0
+image: node:22
 
 # This folder is cached between builds
 # https://docs.gitlab.com/ee/ci/yaml/index.html#cache
@@ -18,17 +18,14 @@ stages:
 build:
   stage: build
   script:
-    - npm install
+    - npm ci
 
 # Convert all asciidoc files to the HTML format
-# https://docs.asciidoctor.org/asciidoctor/latest/cli/
 # Prepare artifacts for publishing
 pages:
   stage: deploy
   script:
-    # build presentations and copy assets to dist/
     - npm run build
-    # list of the result
     - find dist -type f -name "*.html"
     # rename to public, this is required for GitLab Pages artifacts
     - mv dist public
@@ -42,21 +39,11 @@ pages:
 
 export:
   stage: export
-  image:
-    name: astefanutti/decktape:3.9
-    entrypoint: [""]
   script:
-    - mkdir export
-    - echo "Prepare PDF files"
-    # generate PDF files from the HTML files
-    - |+
-      for file in $(find ./public -type f -not -path '*/\.*' -not -path './public/javascripts/*' -name "*.html")
-      do
-        node /decktape/decktape.js --chrome-path chromium-browser "$file" "./export/${file:9:length-5}.pdf"
-      done
+    - npm run pdf -- ./public
   artifacts:
     paths:
-      - export
+      - public
   rules:
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
   environment: production
