@@ -45,16 +45,15 @@ npm install
 [.column]
 [source,bash]
 --
-`-- engine/
+`-- ape/
     |-- example/
-    |-- my presentation/ <1>
+    |-- my-presentation/ <1>
     |   |-- images/ <2>
     |   |-- .settings.adoc <3>
     |   `-- index.adoc <4>
     |-- .contents.adoc <5>
     |-- ...
-    |-- README.adoc
-    `-- server.js
+    `-- README.adoc
 --
 
 [.column.small]
@@ -82,13 +81,11 @@ Convert all `adoc` files to the `html` format in the `dist/` directory:
 npm run build
 --
 
-Or run a web server that will observe changes in the file and refresh the browser automatically:
+Or run a web server with live reload:
 
 [source,bash]
 --
 npm start
-# or
-npm start ./example/index.adoc
 --
 
 == Convert to PDF
@@ -98,6 +95,20 @@ To convert all presentations from HTML to PDF:
 [source,bash]
 --
 npm run pdf
+--
+
+To convert all presentations in a specific directory:
+
+[source,bash]
+--
+npm run pdf -- ./dist/example
+--
+
+To convert a single presentation:
+
+[source,bash]
+--
+npm run pdf -- ./dist/example/index.html
 --
 
 == Push your changes

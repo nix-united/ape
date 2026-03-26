@@ -41,7 +41,7 @@ for (const [name, src] of Object.entries(plugins)) {
 }
 
 // Copy static assets
-for (const dir of ['stylesheets', 'images', 'common']) {
+for (const dir of ['stylesheets', 'images']) {
   const src = path.join(root, dir)
   if (fs.existsSync(src)) {
     const dest = path.join(dist, dir)

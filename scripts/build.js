@@ -4,7 +4,7 @@ const { execFileSync } = require('child_process')
 
 const root = path.resolve(__dirname, '..')
 const dist = path.join(root, 'dist')
-const skip = ['node_modules', 'dist', '.git', '.idea', 'scripts', 'common', 'javascripts', 'stylesheets']
+const skip = ['node_modules', 'dist', '.git', '.idea', 'scripts', 'common', 'javascripts', 'stylesheets', 'includes']
 
 // Copy assets first
 execFileSync('node', [path.join(__dirname, 'copy-assets.js')], { stdio: 'inherit' })

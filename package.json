@@ -24,7 +24,6 @@
     "start": "npm run build && npm run serve",
     "pdf": "node scripts/export-pdf.js"
   },
-  "main": "preview.js",
   "directories": {
     "example": "example"
   },

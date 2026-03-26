@@ -27,7 +27,7 @@ pages:
   stage: deploy
   script:
     # build presentations and copy assets to dist/
-    - npm run copy-assets && npm run build *.adoc */*.adoc
+    - npm run build
     # list of the result
     - find dist -type f -name "*.html"
     # rename to public, this is required for GitLab Pages artifacts

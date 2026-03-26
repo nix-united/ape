@@ -8,11 +8,25 @@ const decktape = path.resolve(__dirname, '..', 'node_modules', '.bin', 'decktape
 const arg = process.argv[2]
 
 if (arg) {
-  const htmlPath = path.resolve(arg)
-  const pdfPath = htmlPath.replace('.html', '.pdf')
-  console.log(`Exporting ${arg} → ${arg.replace('.html', '.pdf')}`)
-  execFileSync(decktape, ['reveal', htmlPath, pdfPath], { stdio: 'inherit' })
+  const resolved = path.resolve(arg)
+  const stat = fs.statSync(resolved)
+
+  if (stat.isDirectory()) {
+    // Export all HTML files in the given directory
+    const files = findHtmlFiles(resolved, '')
+    if (files.length === 0) {
+      console.error(`No HTML files found in ${arg}.`)
+      process.exit(1)
+    }
+    for (const file of files) {
+      exportPdf(path.join(resolved, file))
+    }
+  } else {
+    // Export a single HTML file
+    exportPdf(resolved)
+  }
 } else {
+  // Export all HTML files in dist/
   const files = findHtmlFiles(dist, '')
 
   if (files.length === 0) {
@@ -21,11 +35,14 @@ if (arg) {
   }
 
   for (const file of files) {
-    const htmlPath = path.join(dist, file)
-    const pdfPath = path.join(dist, file.replace('.html', '.pdf'))
-    console.log(`Exporting ${file} → ${file.replace('.html', '.pdf')}`)
-    execFileSync(decktape, ['reveal', htmlPath, pdfPath], { stdio: 'inherit' })
+    exportPdf(path.join(dist, file))
   }
+}
+
+function exportPdf (htmlPath) {
+  const pdfPath = htmlPath.replace('.html', '.pdf')
+  console.log(`Exporting ${path.relative(dist, htmlPath) || path.basename(htmlPath)} → ${path.basename(pdfPath)}`)
+  execFileSync(decktape, ['reveal', htmlPath, pdfPath], { stdio: 'inherit' })
 }
 
 function findHtmlFiles (dir, relDir) {

@@ -41,7 +41,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Build presentations and copy assets
-        run: npm run copy-assets && npm run build *.adoc */*.adoc
+        run: npm run build
       - name: List result HTML files
         run: find dist -type f -name "*.html"
       - run: ls -la ./dist
